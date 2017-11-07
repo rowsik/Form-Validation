@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<title>Javascript - Form Validation</title>
+	<style type="text/css">
+	     .textBox
+	        {
+	        	padding: 3px;
+	        	width: 100%;
+	        }
+	</style>
+
+</head> 
+
+<body>
+	<h1>Student Registration</h1>
+         <form>
+          	<table class="table table-dark"  width="500">
+          	  	 <tr>
+          	  	 	<td width="25%">Name* :</td>
+          	  	 	<td>	
+          	  	 		<input class ="textBox" type="text" name="student_name" id="student_name">
+                   </td>
+                 </tr>
+
+          	  	 <tr>
+          	  	 	<td width="50%">Gender* :</td>
+          	  	 	<td>	
+          	  	 		<input type="radio" name="gender" id="gender" value="Male">Male
+          	  	 		<input type="radio" name="gender" id="gender" value="Female">Female
+                   </td>
+                 </tr>
+
+                 <tr>
+                 	    <td width="25%">Select Your Country:</td>
+                 	      <td>
+                          <select name="country">
+                              <option>Select Your Country...</option>
+                                 <option>Nepal</option>
+                                 <option>China</option>
+                                 <option>Japan</option>
+                                 <option>England</option>
+                                 <option>America</option>
+                          </select>
+                          </td>
+                 </tr>
+
+                  <tr>
+          	  	 	<td width="25%">Class* :</td>
+          	  	 	<td>	
+          	  	 		<input class ="textBox" type="text" name="student_name" id="student_name">
+                   </td>
+                 </tr>
+
+                  <tr>
+          	  	 	<td width="25%">Dob* :</td>
+          	  	 	<td>	
+          	  	 		<input class ="textBox" type="text" name="student_name" id="student_name">
+                   </td>
+                 </tr>
+
+                   <tr>
+                 	    <td width="25%">DOB:</td>
+                 	      <td>
+                          <select name="YEAR">
+                              <option>YEAR</option>
+                                 <option>1990</option>
+                                 <option>1991</option>
+                                 <option>1992</option>
+                                 <option>1993</option>
+                                 <option>1994</option>
+                                 <option>1994</option>
+                          </select>
+                           <select name="Month">
+                              <option>Month</option>
+                                 <option>JAN</option>
+                                 <option>FEB</option>
+                                 <option>MARCH</option>
+                                 <option>APRIL</option>
+                                 <option>MAY</option>
+                                 <option>JUNE</option>
+                          </select>
+                           <select name="DAY">
+                              <option>DAY</option>
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                                 <option>4</option>
+                                 <option>5</option>
+                                 <option>6</option>
+                          </select>
+                          </td>
+                 </tr>
+						    <tr>
+						    	<td>Choose your current semester</td>
+						        <td><select class="custom-select">
+						 		 <option selected>Semester... </option>
+						  		<option value="1">1st</option>
+						  		<option value="2">2nd</option>
+						  		<option value="3">3rd</option>
+								</select>
+								</td
+							</tr>
+
+
+							 <tr>
+          	  	 	<td width="25%">Your pic :</td>
+          	  	 	<td>	
+
+               			  <label class="custom-file">
+ 					 <input type="file" id="file2" class="custom-file-input">
+  						<span class="custom-file-control">Browse Your File...</span>
+							</label>
+          	  	 		
+                   </td>
+                 </tr>
+
+
+                 <tr>
+          	  	  	<td colspan="2">&nbsp;</td>
+          	  	 </tr>
+
+          	  	 <tr>
+          	  	 	  <td colspan="2" align="center">
+          	  	 	  	
+          	  	 	  	<button type="button" class="btn btn-primary" onclick=" validateForm();">Validate Form</button>
+          	  	 	  </td>
+          	  	 </tr>
+
+          	  </table>
+          </form>
+
+      <script type="text/javascript">
+      	
+      	 function validateForm()
+      	     {
+      	     	var studentName = document.getElementById('student_name').value;
+      	     	 var sex = document.getElementById('gender').value;
+               {
+      	     	if(studentName === '' || sex === '')
+      	     	   {
+      	     		alert("Please enter the required field");
+      	     	   }
+               
+                 else
+                   {
+                 	alert("You can proceed.");
+                   }
+                
+
+               
+                
+                 }
+      	     }
+
+      </script>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+
+</html>
